@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="EsemkaRecipes"
+        android:background="@color/red"
+        app:titleTextColor="@color/white"/>
+    
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <androidx.cardview.widget.CardView
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/esemka_recipes"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginBottom="2dp"
+            android:id="@+id/login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a new account to try famous recipes"
+            android:layout_marginBottom="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/signup_username"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:hint="Username"
+            android:layout_height="40dp"
+            android:background="@drawable/bordered_et"
+            android:layout_marginBottom="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/signup_fullName"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:hint="Full Name"
+            android:layout_height="40dp"
+            android:background="@drawable/bordered_et"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/sigmup_datebirth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bordered_et"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/signup_dateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/signup_pass"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Password"
+                android:background="@drawable/bordered_et"
+                android:layout_marginRight="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/signup_confPass"
+                android:inputType="textPassword"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:padding="10dp"
+                android:layout_height="40dp"
+                android:hint="Confirm Password"
+                android:background="@drawable/bordered_et"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an Account?"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/signup_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textStyle="bold"
+                android:textColor="#2196F3"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
